@@ -36,7 +36,7 @@ class _SplashScreenState extends State<SplashScreen> {
             Colors.orangeAccent,
             Colors.pinkAccent,
             Colors.greenAccent,
-          ]),
+          ], begin: Alignment.topLeft, end: Alignment.bottomRight),
         ),
         GradientText(
           "APP",
@@ -49,7 +49,7 @@ class _SplashScreenState extends State<SplashScreen> {
             Colors.orangeAccent,
             Colors.pinkAccent,
             Colors.greenAccent,
-          ]),
+          ], begin: Alignment.topLeft, end: Alignment.bottomRight),
         ),
         // ElevatedButton(
         //   onPressed: () {
