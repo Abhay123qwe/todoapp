@@ -45,7 +45,13 @@ class _HomeScreenState extends State<HomeScreen> {
                         DocumentSnapshot docSnap = snapshot.data.docs[index];
                         return CheckboxListTile(
                           activeColor: clgreen,
-                          title: Text(docSnap["work"]),
+                          title: Text(
+                            docSnap["work"],
+                            style: const TextStyle(
+                                fontSize: 30,
+                                fontWeight: FontWeight.bold,
+                                color: cwhite),
+                          ),
                           value: docSnap["Yes"],
                           onChanged: (newvalue) async {
                             await DatabaseService().tickMethod(
@@ -160,7 +166,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             "Personal",
                             style: TextStyle(
                                 fontSize: 20,
-                                color: cblack,
+                                color: cred,
                                 fontWeight: FontWeight.bold),
                           ),
                         ),
@@ -192,7 +198,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             "College",
                             style: TextStyle(
                                 fontSize: 20,
-                                color: cblack,
+                                color: cred,
                                 fontWeight: FontWeight.bold),
                           ),
                         ),
@@ -224,7 +230,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             "Office",
                             style: TextStyle(
                                 fontSize: 20,
-                                color: cblack,
+                                color: cred,
                                 fontWeight: FontWeight.bold),
                           ),
                         ),
@@ -274,9 +280,9 @@ class _HomeScreenState extends State<HomeScreen> {
                           const SizedBox(
                             width: 60,
                           ),
-                          Text(
+                          const Text(
                             "Add ToDo Task ~",
-                            style: TextStyle(color: clgreen),
+                            style: TextStyle(color: cred),
                           )
                         ],
                       ),
