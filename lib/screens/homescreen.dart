@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 
 import 'package:random_string/random_string.dart';
 import 'package:todoapp/const/colors.dart';
+import 'package:todoapp/const/gradient.dart';
 import 'package:todoapp/db_services/database.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -106,7 +107,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       body: Container(
-        padding: const EdgeInsets.only(top: 70, left: 20),
+        padding: const EdgeInsets.only(top: 70, left: 20, right: 20),
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         decoration: const BoxDecoration(
@@ -132,9 +133,20 @@ class _HomeScreenState extends State<HomeScreen> {
               height: 10,
             ),
             Container(
-              child: const Text(
-                "Abhay,",
-                style: TextStyle(fontSize: 54, color: cblack),
+              decoration: const BoxDecoration(
+                  color: cwhite, backgroundBlendMode: BlendMode.difference),
+              child: const GradientText(
+                "Abhay",
+                style: TextStyle(decoration: TextDecoration.none, fontSize: 60),
+                gradient: LinearGradient(colors: [
+                  Colors.orangeAccent,
+                  Colors.greenAccent,
+                  Colors.pinkAccent,
+                  Colors.cyanAccent,
+                  Colors.orangeAccent,
+                  Colors.pinkAccent,
+                  Colors.orangeAccent,
+                ], begin: Alignment.topLeft, end: Alignment.bottomRight),
               ),
             ),
             const SizedBox(
